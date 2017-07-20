@@ -184,5 +184,28 @@ namespace WindowsFormsApplication1
             dataGridView1.DataSource = ds.Tables[0];
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Telephone_directory WHERE Podrazdel = '"+ comboBox1.Text + "';", con);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Telephone_directory");
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            comboBox1.Text = "";
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Telephone_directory;", con);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Telephone_directory");
+            dataGridView1.DataSource = ds.Tables[0];
+        }
     }
 }
