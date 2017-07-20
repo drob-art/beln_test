@@ -30,22 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.test_workDataSet = new WindowsFormsApplication1.test_workDataSet();
-            this.telephonedirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.telephone_directoryTableAdapter = new WindowsFormsApplication1.test_workDataSetTableAdapters.telephone_directoryTableAdapter();
             this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doljnostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.podrazdelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberworkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberprivateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numbermobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephonedirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.test_workDataSet = new WindowsFormsApplication1.test_workDataSet();
+            this.telephone_directoryTableAdapter = new WindowsFormsApplication1.test_workDataSetTableAdapters.telephone_directoryTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПоФИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.подразделенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -63,12 +65,11 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.поискПоФИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.подразделенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephonedirectoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.test_workDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.telephonedirectoryBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +91,53 @@
             this.dataGridView1.Size = new System.Drawing.Size(670, 244);
             this.dataGridView1.TabIndex = 0;
             // 
+            // fIODataGridViewTextBoxColumn
+            // 
+            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
+            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
+            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            this.fIODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // doljnostDataGridViewTextBoxColumn
+            // 
+            this.doljnostDataGridViewTextBoxColumn.DataPropertyName = "Doljnost";
+            this.doljnostDataGridViewTextBoxColumn.HeaderText = "Doljnost";
+            this.doljnostDataGridViewTextBoxColumn.Name = "doljnostDataGridViewTextBoxColumn";
+            this.doljnostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // podrazdelDataGridViewTextBoxColumn
+            // 
+            this.podrazdelDataGridViewTextBoxColumn.DataPropertyName = "Podrazdel";
+            this.podrazdelDataGridViewTextBoxColumn.HeaderText = "Podrazdel";
+            this.podrazdelDataGridViewTextBoxColumn.Name = "podrazdelDataGridViewTextBoxColumn";
+            this.podrazdelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberworkDataGridViewTextBoxColumn
+            // 
+            this.numberworkDataGridViewTextBoxColumn.DataPropertyName = "Number_work";
+            this.numberworkDataGridViewTextBoxColumn.HeaderText = "Number_work";
+            this.numberworkDataGridViewTextBoxColumn.Name = "numberworkDataGridViewTextBoxColumn";
+            this.numberworkDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberprivateDataGridViewTextBoxColumn
+            // 
+            this.numberprivateDataGridViewTextBoxColumn.DataPropertyName = "Number_private";
+            this.numberprivateDataGridViewTextBoxColumn.HeaderText = "Number_private";
+            this.numberprivateDataGridViewTextBoxColumn.Name = "numberprivateDataGridViewTextBoxColumn";
+            this.numberprivateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numbermobDataGridViewTextBoxColumn
+            // 
+            this.numbermobDataGridViewTextBoxColumn.DataPropertyName = "Number_mob";
+            this.numbermobDataGridViewTextBoxColumn.HeaderText = "Number_mob";
+            this.numbermobDataGridViewTextBoxColumn.Name = "numbermobDataGridViewTextBoxColumn";
+            this.numbermobDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephonedirectoryBindingSource
+            // 
+            this.telephonedirectoryBindingSource.DataMember = "telephone_directory";
+            this.telephonedirectoryBindingSource.DataSource = this.bindingSource1;
+            // 
             // bindingSource1
             // 
             this.bindingSource1.DataSource = this.test_workDataSet;
@@ -100,50 +148,9 @@
             this.test_workDataSet.DataSetName = "test_workDataSet";
             this.test_workDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // telephonedirectoryBindingSource
-            // 
-            this.telephonedirectoryBindingSource.DataMember = "telephone_directory";
-            this.telephonedirectoryBindingSource.DataSource = this.bindingSource1;
-            // 
             // telephone_directoryTableAdapter
             // 
             this.telephone_directoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // fIODataGridViewTextBoxColumn
-            // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
-            // 
-            // doljnostDataGridViewTextBoxColumn
-            // 
-            this.doljnostDataGridViewTextBoxColumn.DataPropertyName = "Doljnost";
-            this.doljnostDataGridViewTextBoxColumn.HeaderText = "Doljnost";
-            this.doljnostDataGridViewTextBoxColumn.Name = "doljnostDataGridViewTextBoxColumn";
-            // 
-            // podrazdelDataGridViewTextBoxColumn
-            // 
-            this.podrazdelDataGridViewTextBoxColumn.DataPropertyName = "Podrazdel";
-            this.podrazdelDataGridViewTextBoxColumn.HeaderText = "Podrazdel";
-            this.podrazdelDataGridViewTextBoxColumn.Name = "podrazdelDataGridViewTextBoxColumn";
-            // 
-            // numberworkDataGridViewTextBoxColumn
-            // 
-            this.numberworkDataGridViewTextBoxColumn.DataPropertyName = "Number_work";
-            this.numberworkDataGridViewTextBoxColumn.HeaderText = "Number_work";
-            this.numberworkDataGridViewTextBoxColumn.Name = "numberworkDataGridViewTextBoxColumn";
-            // 
-            // numberprivateDataGridViewTextBoxColumn
-            // 
-            this.numberprivateDataGridViewTextBoxColumn.DataPropertyName = "Number_private";
-            this.numberprivateDataGridViewTextBoxColumn.HeaderText = "Number_private";
-            this.numberprivateDataGridViewTextBoxColumn.Name = "numberprivateDataGridViewTextBoxColumn";
-            // 
-            // numbermobDataGridViewTextBoxColumn
-            // 
-            this.numbermobDataGridViewTextBoxColumn.DataPropertyName = "Number_mob";
-            this.numbermobDataGridViewTextBoxColumn.HeaderText = "Number_mob";
-            this.numbermobDataGridViewTextBoxColumn.Name = "numbermobDataGridViewTextBoxColumn";
             // 
             // menuStrip1
             // 
@@ -169,21 +176,21 @@
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -195,6 +202,19 @@
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
             this.поискToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.поискToolStripMenuItem.Text = "Поиск";
+            // 
+            // поискПоФИОToolStripMenuItem
+            // 
+            this.поискПоФИОToolStripMenuItem.Name = "поискПоФИОToolStripMenuItem";
+            this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.поискПоФИОToolStripMenuItem.Text = "Поиск по ФИО";
+            this.поискПоФИОToolStripMenuItem.Click += new System.EventHandler(this.поискПоФИОToolStripMenuItem_Click);
+            // 
+            // подразделенияToolStripMenuItem
+            // 
+            this.подразделенияToolStripMenuItem.Name = "подразделенияToolStripMenuItem";
+            this.подразделенияToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.подразделенияToolStripMenuItem.Text = "Подразделения";
             // 
             // textBox1
             // 
@@ -332,6 +352,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 16;
+            this.textBox7.Visible = false;
             // 
             // label7
             // 
@@ -341,33 +362,36 @@
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Поиск по ФИО";
+            this.label7.Visible = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(119, 45);
+            this.button3.Location = new System.Drawing.Point(143, 42);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
             this.button3.Text = "Поиск";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // поискПоФИОToolStripMenuItem
+            // button4
             // 
-            this.поискПоФИОToolStripMenuItem.Name = "поискПоФИОToolStripMenuItem";
-            this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.поискПоФИОToolStripMenuItem.Text = "Поиск по ФИО";
-            // 
-            // подразделенияToolStripMenuItem
-            // 
-            this.подразделенияToolStripMenuItem.Name = "подразделенияToolStripMenuItem";
-            this.подразделенияToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.подразделенияToolStripMenuItem.Text = "Подразделения";
+            this.button4.Location = new System.Drawing.Point(110, 43);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(27, 23);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 380);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox7);
@@ -392,9 +416,9 @@
             this.Text = "Справочник";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephonedirectoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.test_workDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.telephonedirectoryBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -440,6 +464,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

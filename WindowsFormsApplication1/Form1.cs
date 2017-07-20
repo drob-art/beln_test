@@ -152,5 +152,37 @@ namespace WindowsFormsApplication1
                     button2.Visible = false;
             }
         }
+
+        private void поискПоФИОToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label7.Visible = true;
+            textBox7.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Telephone_directory WHERE (FIO LIKE '%" + textBox7.Text + "%');", con);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Telephone_directory");
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox7.Text = "";
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Telephone_directory;", con);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Telephone_directory");
+            dataGridView1.DataSource = ds.Tables[0];
+
+        }
     }
 }
