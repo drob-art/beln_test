@@ -47,7 +47,6 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискПоФИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.подразделенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -199,8 +198,7 @@
             // поискToolStripMenuItem
             // 
             this.поискToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поискПоФИОToolStripMenuItem,
-            this.подразделенияToolStripMenuItem});
+            this.поискПоФИОToolStripMenuItem});
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
             this.поискToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.поискToolStripMenuItem.Text = "Поиск";
@@ -211,12 +209,6 @@
             this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.поискПоФИОToolStripMenuItem.Text = "Поиск по ФИО";
             this.поискПоФИОToolStripMenuItem.Click += new System.EventHandler(this.поискПоФИОToolStripMenuItem_Click);
-            // 
-            // подразделенияToolStripMenuItem
-            // 
-            this.подразделенияToolStripMenuItem.Name = "подразделенияToolStripMenuItem";
-            this.подразделенияToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.подразделенияToolStripMenuItem.Text = "Подразделения";
             // 
             // textBox1
             // 
@@ -493,7 +485,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem поискПоФИОToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem подразделенияToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;

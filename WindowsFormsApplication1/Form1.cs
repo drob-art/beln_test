@@ -25,13 +25,14 @@ namespace WindowsFormsApplication1
 
         }
 
+        //Добавление новой записи в таблицу
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" | textBox2.Text == "" | comboBox2.Text == "" | textBox4.Text == "" | textBox5.Text == "" | textBox6.Text == "")
             {
-                MessageBox.Show("Заполните все данные", "Ошибка", MessageBoxButtons.OK);
+                MessageBox.Show("Заполните все данные", "Ошибка", MessageBoxButtons.OK); //проверка на корректность заполнения данных
             }
-            else
+            else //если введено все корректно то добавляем
             {
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
                 con.Open();
@@ -44,8 +45,6 @@ namespace WindowsFormsApplication1
                 const string message = "Запись успешно добавлена. Добавить еще одну запись?";
                 const string caption = "Добавление";
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                // If the no button was pressed ...
                 if (result == DialogResult.No)
                 {
                     textBox1.Text = "";
@@ -87,6 +86,7 @@ namespace WindowsFormsApplication1
 
         }
 
+        //удаление выбранной записи
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int cel_nom = dataGridView1.CurrentRow.Index; 
@@ -119,6 +119,7 @@ namespace WindowsFormsApplication1
 
         }
 
+        //редактирование изменение выбранной записи
         private void button2_Click(object sender, EventArgs e)
         {
             int cel_nom = dataGridView1.CurrentRow.Index;
@@ -161,6 +162,7 @@ namespace WindowsFormsApplication1
             button4.Visible = true;
         }
 
+        //поис по ФИО сотрудника
         private void button3_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
@@ -185,6 +187,7 @@ namespace WindowsFormsApplication1
 
         }
 
+        //выборка по подразделениям
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\test\test_work.mdf;Integrated Security=True;Connect Timeout=30");
